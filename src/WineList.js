@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import update from "immutability-helper";
+import { Link } from "react-router-dom";
 
 class WineList extends Component {
   constructor() {
@@ -106,7 +107,9 @@ class WineList extends Component {
             				{wine.description}
             			</div>
             			<div className="margin-top-20">
-            				<a href="#" className="btn btn-default">Edit Wine</a>
+                    <Link to={`/edit/${wine.id}`} className="btn btn-default">
+                      Edit Wine
+                    </Link>
             			</div>
             		</div>
             	</div>
